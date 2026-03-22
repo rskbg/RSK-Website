@@ -2,13 +2,19 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакти - RSK</title>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-  <h1>RSK.bg</h1>
+  <h1>RSK</h1>
   <nav>
     <a href="index.html">Начало</a>
     <a href="about.html">За нас</a>
@@ -17,30 +23,43 @@
 </header>
 
 <main>
-  <h2>Свържи се с нас</h2>
 
-    <form>
-    <label>Име:</label><br>
-    <input type="text"><br><br>
+  <h1 class="hero-title">Свържете се с нас</h1>
 
-    <label>Email:</label><br>
-    <input type="email"><br><br>
+  <p class="hero-text">
+    Изпратете ни запитване и ще се свържем с вас възможно най-скоро.
+  </p>
 
-    <label>Съобщение:</label><br>
-    <textarea></textarea><br><br>
+  <!-- 🔥 PREMIUM FORM -->
+  <form class="contact-form" action="https://formspree.io/f/mvzwjzer" method="POST">
 
-    <button>Изпрати</button>
+    <div class="input-group">
+      <input type="text" name="name" required>
+      <label>Име</label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" name="email" required>
+      <label>Имейл</label>
+    </div>
+
+    <div class="input-group">
+      <textarea name="message" rows="5" required></textarea>
+      <label>Съобщение</label>
+    </div>
+
+    <button type="submit" class="submit-btn">Изпрати съобщение</button>
+
   </form>
+
 </main>
 
 <footer class="bottom-bar">
-  <a href="tel:+359000000000"><img src="images/phone.svg"></a>
-  <a href="viber://chat?number=%2B359000000000"><img src="images/viber.svg"></a>
-  <a href="https://wa.me/359000000000"><img src="images/whatsapp.svg"></a>
-  <a href="mailto:info@rsk.bg"><img src="images/email.svg"></a>
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
 </footer>
-
-</div>
 
 </body>
 </html>
