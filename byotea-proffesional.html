@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byotea Professional</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Byotea Professional</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+const products = [
+  {
+    name: "Професионален продукт 1",
+    img: "images/byotea/professional/product1.jpg",
+    desc: "Описание на продукт 1"
+  },
+  {
+    name: "Професионален продукт 2",
+    img: "images/byotea/professional/product2.jpg",
+    desc: "Описание на продукт 2"
+  },
+  {
+    name: "Професионален продукт 3",
+    img: "images/byotea/professional/product3.jpg",
+    desc: "Описание на продукт 3"
+  }
+  // 👉 добави до 32 продукта
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
