@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <title>Byotea AHA</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ИМЕ НА СТРАНИЦАТА</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-
+<body class="products-page">
+  
 <header>
-    <nav>
-        <a href="index.html">Начало</a>
-        <a href="byotea.html">Назад</a>
-        <a href="contact.html">Контакт</a>
-    </nav>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
 </header>
 
 <main>
 
-<h2 class="section-title">Byotea AHA серия</h2>
+<h2 class="section-title">ИМЕ НА СЕРИЯТА</h2>
 
-<div class="products">
-
-  <div class="product">
-    <img src="images/byotea/aha.jpg">
-    <h3>Почистващ гел</h3>
-    <p>Подходящ за всеки тип кожа</p>
-  </div>
-
-</div>
+<div class="products" id="products"></div>
 
 </main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Крем емулсия с азелаинова киселина - 30мл.",
+    img: "images/byotea/aha/product1.jpg",
+    desc: "Емулсия, богата на активни съставки. Овлажнява, изсветлява и помага за намаляване на хиперпигментацията. Оставя кожата сияйна и изглажда бръчките. АКТИВНА: Азелаинова киселина: мастна киселина с антимеланиново действие. Помага за намаляване на обезцветяването и оставя тенът по-равномерен."
+  },
+  {
+    name: "Крем емулсия с плодови киселини - 50мл.",
+    img: "images/byotea/aha/product2.jpg",
+    desc: "Емулсия, богата на витамин Е, помага за защитата на кожата. Ревитализира кожата и я овлажнява. Алфа хидрокси киселини: така наречените плодови киселини, които имат изсветляващи и ексфолиращи свойства и са подходящи за борба с обезцветяване, тъмни петна, белези от акне, фотостареене и стареене на кожата."
+  },
+  {
+    name: "Почистващ мус - 100мл.",
+    img: "images/byotea/aha/product3.jpg",
+    desc: "Благодарение на наличието на смес от киселини, мусът осигурява ексфолиращо действие и дълбоко почистване. Той подготвя кожата за действието на активните съставки на продукта."
+  },
+  {
+    name: "Почистващ ексфолиращ гел - 100мл.",
+    img: "images/byotea/aha/product4.jpg",
+    desc: "Ексфолиращ гел, предназначен за бърза регенерация на повърхностните клетки на кожата. Особено подходящ за дебели кожи."
+  },
+  {
+    name: "Маска за лице с плодови киселини - 100мл.",
+    img: "images/byotea/aha/product5.jpg",
+    desc: "Маска, богата на активни съставки, които подхранват кожата, подобряват блясъка и благоприятстват обновяването на кожата."
+  }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
 
 </body>
 </html>

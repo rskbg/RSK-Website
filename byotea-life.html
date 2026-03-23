@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byotea Life</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Life</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Booster с витамин Е и F - 30мл.",
+    img: "images/byotea/life/product1.jpg",
+    desc: "Активен концентрат за лице с витамини Е и F. Той помага за възстановяване на правилното подхранване на кожата в различните етапи от живота, подобрява естествената му пълнота. АКТИВЕН: Витамин Е: предпазва от увреждане на околната среда, замърсяване, дим. Витамин F: предпазва от външни стресира, помага за намаляване на загубата на вода. Бяла и червена глина: те изпълняват детоксикиращо и регенериращо действие."
+  },
+  {
+    name: "Крем емулсия с витамин Е и F - 50мл.",
+    img: "images/byotea/life/product2.jpg",
+    desc: "Мека емулсия, богата на витамини Е и F. Осигурява овлажняване и подхранване, като помага за забавяне на признаците на стареене и появата на бръчки и тъмни петна. АКТИВЕН: Витамин Е: предпазва от увреждане на околната среда, замърсяване, дим. Витамин F: защитава срещу външни стресове, помага за намаляване на загубата на вода. Бяло и червено глина: Те извършват детоксикиращо и регенериращо действие.атира кожата."
+  },
+  {
+    name: "Маска за лице с витамин Е и F - 100мл.",
+    img: "images/byotea/life/product3.jpg",
+    desc: "Маска богата на витамини Е и F. Подпомага еластичността на кожата на тъканите и предпазва кожата от външни фактори, като я прави по-компактна и тонизирана. АКТИВЕН: Витамин Е: предпазва от увреждане на околната среда, замърсяване, дим. Витамин F: предпазва от външни стресове, помага за намаляване на загубата на вода. Бяла и червена глина: те извършват детоксикация и регенериране"
+  }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

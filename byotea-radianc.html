@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byotea Radianc</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Radian C</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Гел за околоочен контур с витамин С - 30мл.",
+    img: "images/byotea/radianc/product1.jpg",
+    desc: "Гел за околоочен контур с мека и освежаваща консистенция с дрениращо и овлажняващо действие, ефективен срещу тъмните кръгове под очите. АКТИВНИ: Витамини А и С: те помагат в борбата с причините за стареенето и подобряват текстурата на кожата. Витамин РР: (ниацин или витамин В3) помага за намаляване на признаците на стареене. Пантенол: (прекурсор на витамин В5) предпазва и овлажнява кожата."
+  },
+  {
+    name: "Серум за лице с витамин С - 50мл.",
+    img: "images/byotea/radianc/product2.jpg",
+    desc: "Силен серум с регенериращ ефект, предназначен да помогне за противодействие на признаците на стареене. АКТИВЕН: Витамини А и С: те помагат в борбата с причините за стареенето и подобряват текстурата на кожата. Витамин РР: (ниацин или витамин В3) помага за намаляване на признаците на времето. Пантенол: (прекурсор на витамин В5) защитава и овлажнява кожата."
+  },
+  {
+    name: "Крем емулсия за лице с витамин С - 50мл.",
+    img: "images/byotea/radianc/product3.jpg",
+    desc: "Концентрирана емулсия със защитно, овлажняващо и регенериращо действие. Оставя кожата сияйна и компактна. Попива лесно, оставяйки кожата суха и мека. AКТИВЕН: Витамини А и С: те помагат в борбата с причините за стареенето и подобряват текстурата на кожата. Витамин РР: (ниацин или витамин В3) помага за намаляване на признаците на времето. Пантенол: (прекурсор на витамин В5) защитава и овлажнява кожата."
+  },{
+    name: "Booster с витамин С - 30мл.",
+    img: "images/byotea/radianc/product4.jpg",
+    desc: "Течен гел, концентрат от витамин С, който озарява кожата и я прави по-стегната и компактна. Помага за забавяне на стареенето, процес и развитие на тъмни петна. Укрепва кожата. АКТИВНИ: Витамини А и С: те помагат в борбата с причините за стареенето и подобряват текстурата на кожата. Витамин РР: (ниацин или витамин В3) помага за намаляване на признаците на стареене. Пантенол: (витамин В5) Защитава и овлажнява кожата."
+  }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

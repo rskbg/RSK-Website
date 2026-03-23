@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byotea Anti-Age</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Anti-Age</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Нощен Anti-Age крем - 50мл.",
+    img: "images/byotea/anti-age/product1.jpg",
+    desc: "Гъст и концентриран крем, богат на хранителни вещества. Осигурява овлажняване и помага за противодействие на стареенето, благоприятствайки ефекти на нощно възстановяване. Употреба: Нанасяйте вечер. Разпределете"
+  },
+  {
+    name: "Дневен Anti-Age крем - 50мл.",
+    img: "images/byotea/anti-age/product2.jpg",
+    desc: "Дневен крем, който осигурява овлажняване и еластичност, като помага в борбата с причините за стареенето на кожата. Укрепва кожата, прави я по-устойчива и помага за намаляване на признаците на стареене."
+  },
+   {
+    name: "Booster Anti-Age - 30мл.",
+    img: "images/byotea/anti-age/product3.jpg",
+    desc: "Активен концентрат за лице, богат на хиалуронова киселина с високо молекулно тегло. Помага за намаляване на признаците на стареене. АКТИВНИ: Пептиди, подобни на ботокса: уплътняват, подобряват благосъстоянието и външния вид на кожата. Хиалуронова киселина: Осигурява подхранващо действие. Стягане, изпълващ и овлажняващ ефект."
+  },
+  {
+    name: "Крем за околоочен контур - 15мл.",
+    img: "images/byotea/anti-age/product4.jpg",
+    desc: "Крем, богат на активни съставки, които действат върху маркираните линии на кожата, благоприятствайки възстановяването на околоочния контур. Има стягащо действие с лифтинг ефект и благоприятства бръчките да изглеждат намалени. АКТИВЕН: Пептиди, подобни на ботокс: подобряват благосъстоянието и външния вид на кожата. Хиалуронова киселина с високо и ниско молекулно тегло: осигурява подхранващо действие, стягащ, изпълващ и овлажняващ ефект.Описание на продукта"
+  },
+    {
+    name: "Концентран филър - 50мл.",
+    img: "images/byotea/anti-age/product5.jpg",
+    desc: "Смес от хиалуронова киселина и активни биопептиди от модерна концепция с ботоксоподобно действие, с уплътняващ, стягащ и еластичен ефект. АКТИВНИ: Пептиди, подобни на ботокса: уплътняват, подобряват благосъстоянието и външния вид на кожата. Високо и ниско молекулно тегло; хиалуронова киселина: осигурява подхранващо действие. Стягане, уплътняване и овлажняващ ефект."
+  }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
