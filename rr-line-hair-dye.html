@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hair dye</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Боя за коса</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Боя за коса Crema Colore - 100мл.",
+    img: "images/rr-line/hair-dye/product1.jpg",
+    desc: "Крем боя за коса с оксидиращо действие. Естествен и натурален продукт с отлична покриваемост на белите коси, придава блясък. Утреба: Смесете в неметален съд  боя и оксидант 10,20,30,40 вол. в съотношение 1:1,5. Нанесете върху суха не мита коса. Оставете да действа 30-40 мин. след което изплакнете с вода. Супер изсветляващите серии са в пропорция 1:2."
+
+  },
+  {
+    name: "Оксидант 10/20/30/40 vol. - 1000мл.",
+    img: "images/rr-line/hair-dye/product2.jpg",
+    desc: "Първоначалния обем остава стабилен. Избягвайте контакт с очите. При случай на взаимодействие изплакнете веднага с вода.Следвайте инструкциите внимателно: винаги носете защитни  ръкавици по време на смесване и манипулиране.",
+  },
+    {
+    name: "Оксидант 10/20/30/40 vol. - 150мл.",
+    img: "images/rr-line/hair-dye/product3.jpg",
+    desc: "Първоначалния обем остава стабилен. Избягвайте контакт с очите. При случай на взаимодействие изплакнете веднага с вода.Следвайте инструкциите внимателно: винаги носете защитни  ръкавици по време на смесване и манипулиране.",
+    },
+    {
+    name: "Синя безамонячна супра - 500гр.",
+    img: "images/rr-line/hair-dye/product4.jpg",
+    desc: "Идеална за изрусяване на кичури и цяла коса.Нейните специфични летливи съставки намаляват риска от дразнене и чувствителност. Може да се издигне до 7 тона и да се смесва с водороден пероксид в 10,20,30,40 вол.Максимално време за обработка: 35 мин.Употреба: Смесете 1 част от праха (30 гр.) + 2 части оксиданд (60 мл) и се оставят да обработва до достигане на желания ефект."
+
+    },
+    {
+    name: "Лилава безамонячна супра - 500гр.",
+    img: "images/rr-line/hair-dye/product5.jpg",
+    desc: "Сваля 9 тона с бавно и прогресивно действие. предпазва структурата на косъма, оставяйки косата мека и еластична.Употреба – разтворете в неметален съд, смесете 1 доза от супрата към 2 дози оксидант (6,10,20,30,40 vol.) в зависимост от желания клас на изрусяване. Оставете да подейства от 15 до 45/50 мин. Изплакнете обилно с вода и нанесете след това шампоан."
+
+    }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

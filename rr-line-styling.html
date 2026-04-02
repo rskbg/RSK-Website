@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>styling</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Стилизанти</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Extra strong gel - 250мл.",
+    img: "images/rr-line/styling/product1.jpg",
+    desc: "Идеален за моделиране, неомазнява и неотежнява."
+  },
+  {
+    name: "Вакса за коса - 100мл.",
+    img: "images/rr-line/styling/product2.jpg",
+    desc: "Идеална за оформяне на желаната прическа  с леко лъскав ефект." 
+  },
+    {
+    name: "Лак без газ - 320мл.",
+    img: "images/rr-line/styling/product3.jpg",
+    desc: "Има отлична фиксация, придава блясък и еластичност и предпазва косата от неблагоприятните условия на средата.Не оставя следи по косата и лесно могат да бъдат отстранени с помощта на четка и шампоан."
+    },
+     {
+    name: "Флуид за изправяне - 250мл.",
+    img: "images/rr-line/styling/product4.jpg",
+    desc: "Дисциплинира непокорната коса, правейки я лъскава,елиминира чупливостта и я предпазва от топлината на пресата и сешоара. Не утежнява косата и не я омазнява."
+  },
+  {
+    name: "Крем за къдрици - 250мл.",
+    img: "images/rr-line/styling/product5.jpg",
+    desc: "Оформя и укрепва къдриците, оставяйки ги еластични и им придава блясък."
+  },
+    {
+    name: "Кристали - 100мл.",
+    img: "images/rr-line/styling/product6.jpg",
+    desc: "Запечатва епидермиса и изглажда  повърхността на косата, оставяйки я невероятно копринена и блестяща. Неомазнява, придава естествен лъскав ефект."
+    },
+    {
+    name: "Лак със силна фиксация - 500мл.",
+    img: "images/rr-line/styling/product7.jpg",
+    desc: "Има отлична фиксация, придава блясък и еластичност и предпазва косата от неблагоприятните условия на средата." 
+  },
+  {
+    name: "Спрей за блясък - 150мл.",
+    img: "images/rr-line/styling/product8.jpg",
+    desc: "Полира финално косата, придава блясък и естествен вид. Неотежнява и неомазнява и има антистатично действие."
+  },
+   {
+    name: "Спрей за обем - 250мл.",
+    img: "images/rr-line/styling/product9.jpg",
+    desc: "Придава обем и сила на косата. Заздравява корена и създава обем."
+  },
+   {
+    name: "Спрей за термална защита преди преса и сешоар - 250мл.",
+    img: "images/rr-line/styling/product10.jpg",
+    desc: "Предпазва косата от изгаряне."
+  }
+    
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gojiberry</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Серия за боядисани коси с годжи бери </h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Шампоан за боядисани коси - 1000мл.",
+    img: "images/rr-line/gojiberry/product1.jpg",
+    desc: "Обогатен с  мляко и пшенични протеини, които имат подхранващо и хидратиращо действие.Придават на косата интензивен и брилянтен цвят."
+  },
+  {
+    name: "Шампоан за боядисани коси - 350мл.",
+    img: "images/rr-line/gojiberry/product2.jpg",
+    desc: "Обогатен с  мляко и пшенични протеини, които имат подхранващо и хидратиращо действие.Придават на косата интензивен и брилянтен цвят."
+  },
+    {
+    name: "Маска за боядисани коси - 1000мл.",
+    img: "images/rr-line/gojiberry/product3.jpg",
+    desc: "Обогатена с годжи бери,мляко и протеини, възстановява, подхранва и запечатва кутикула на косъма, оставяйки я мека и копринена, с по-интензивен, жизнен и траен ефект"
+    },
+    {
+    name: "Маска за боядисани коси - 500мл.",
+    img: "images/rr-line/gojiberry/product4.jpg",
+    desc: "Обогатена с годжи бери,мляко и протеини, възстановява, подхранва и запечатва кутикула на косъма, оставяйки я мека и копринена, с по-интензивен, жизнен и траен ефект"
+    },
+    {
+    name: "Кристали за боядирани коси - 200мл.",
+    img: "images/rr-line/gojiberry/product5.jpg",
+    desc: "Обогатени с годжи бери, възстановява и предпазва интензивността на цвета, за екстремен и траен блясък."
+    }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>macadamia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Серия с макадамия и колаген</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Шампоан с макадамия и колаген - 1000мл.",
+    img: "images/rr-line/macadamia/product1.jpg",
+    desc: "Подходящ за лечение на силно изтощена коса. Има бързо ефективно действие благодарение на екстракта от колаген за възстановяване и подхранване на слаби и изтощени коси. При боядисани коси подпомага за по траен цвят. Придава мекота и блясък. Клинично тестван."
+     },
+  {
+    name: "Шампоан с макадамия и колаген - 350мл.",
+    img: "images/rr-line/macadamia/product2.jpg",
+    desc: "Подходящ за лечение на силно изтощена коса. Има бързо ефективно действие благодарение на екстракта от колаген за възстановяване и подхранване на слаби и изтощени коси. При боядисани коси подпомага за по траен цвят. Придава мекота и блясък. Клинично тестван."
+  },
+    {
+    name: "Маска с макадамия и колаген - 1000мл.",
+    img: "images/rr-line/macadamia/product3.jpg",
+    desc: "Подходяща за лечение на силно изтощена коса. Има бързо ефективно действие благодарение на екстракта от колаген за възстановяване и подхранване на слаби и изтощени коси. При боядисани коси подпомага за по траен цвят. Придава мекота и блясък. Клинично тестванa."
+    },
+    {
+    name: "Маска с макадамия и колаген - 500мл.",
+    img: "images/rr-line/macadamia/product4.jpg",
+    desc: "Подходяща за лечение на силно изтощена коса. Има бързо ефективно действие благодарение на екстракта от колаген за възстановяване и подхранване на слаби и изтощени коси. При боядисани коси подпомага за по траен цвят. Придава мекота и блясък. Клинично тестванa."
+    },
+    {
+    name: "Мултифункционален спрей с макадамия и колаген - 200мл.",
+    img: "images/rr-line/macadamia/product5.jpg",
+    desc: "Идеален за лечение на силно изтощена коса. Има бързо ефективно действие благодарение на екстракта от колаген за възстановяване и подхранване на слаби и изтощени коси. Прониква дълбоко в повредената коса, придава мек и лъскав вид и блясък. Спомага за лесно разресване и предпазва косъма при термообработка. Остава косата жива. Клинично тестван."
+    },
+    {
+    name: "Подхранващ флуид с макадамия и колаген - 100мл.",
+    img: "images/rr-line/macadamia/product6.jpg",
+    desc: "– идеален за третиране, хидратиране на косата. Премахва цъфтежа. Придава  уникален блясък, мекота и усещане за жива и подхранена коса. Действа още при първото третиране. Клинично тестван."
+    }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
