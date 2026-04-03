@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Colour</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="products-page">
+  
+<header>
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="about.html">За нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+</header>
+
+<main>
+
+<h2 class="section-title">Pure Colour</h2>
+
+<div class="products" id="products"></div>
+
+</main>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">⬅ Назад</button>
+
+<footer class="bottom-bar">
+  <a href="tel:+359887808640"><img src="images/phone.svg"></a>
+  <a href="viber://chat?number=%2B359887808640"><img src="images/viber.svg"></a>
+  <a href="https://wa.me/359887808640"><img src="images/whatsapp.svg"></a>
+  <a href="mailto:rskbg.office@gmail.com"><img src="images/email.svg"></a>
+</footer>
+
+<script>
+// 👉 ТУК СИ СМЕНЯШ ПРОДУКТИТЕ
+const products = [
+  {
+    name: "Анти-жълт шампоан - 1000мл.",
+    img: "images/rr-line/anti-yellow/product1.jpg",
+    desc: " Обогатен с  протеини и екстракти от пресовано грозде да обият нежеланите жълти тонове при изсветляване на косата. Препоръчва се при изрусени и третирани коси за възстановяване на блясъка на косата."
+       },
+  {
+    name: "Анти-жълт шампоан - 350мл.",
+    img: "images/rr-line/anti-yellow/product2.jpg",
+    desc: " Обогатен с  протеини и екстракти от пресовано грозде да обият нежеланите жълти тонове при изсветляване на косата. Препоръчва се при изрусени и третирани коси за възстановяване на блясъка на косата."
+  },
+        {
+    name: "Анти-жълта маска - 1000мл.",
+    img: "images/rr-line/anti-yellow/product3.jpg",
+    desc: ""
+    }
+];
+
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>
